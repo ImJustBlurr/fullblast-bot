@@ -41,7 +41,7 @@ async def on_ready():
 @client.command()
 @commands.has_permissions(manage_messages=True) 
 async def test(ctx):
-    await ctx.send("testing!!!")
+    await ctx.send("testing!")
 
 #handles errors
 @client.event
