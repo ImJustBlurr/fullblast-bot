@@ -30,7 +30,7 @@ async def on_ready():
   await client.change_presence(activity=discord.Activity(type=discord.ActivityType.playing, name="Loading..."))
   await asyncio.sleep(3) 
   await client.change_presence(activity=discord.Activity(type=discord.ActivityType.playing, name="Loaded!"))
-  await asyncio.sleep(3)
+  await asyncio.sleep(1)
   await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="over the server"))
   await staffTesting.send("Bot Online.")
 
