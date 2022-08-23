@@ -828,10 +828,20 @@ async def customgame(ctx, *, players: int = 10):
             embed2.set_footer(text=f'GLHF!')
             await ctx.send(embed=embed2)
 
+#Warn Command
+@client.command()
+@commands.has_permissions(manage_messages=True) 
+async def warn(ctx, user: discord.Member, message):
+    
+    id = user.id
+    await user.send(message)
 
 
 
-
+@warn.error
+async def clear_error(ctx, error):
+    if isinstance(error, commands.MissingRequiredArgument):
+        await ctx.send('Please specify the user you would like to warn. Usage: .warn <user> <reason>')
 
 
 #DYNAMIC VC ----------------------------------------------------------
