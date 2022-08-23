@@ -831,7 +831,7 @@ async def customgame(ctx, *, players: int = 10):
 #Warn Command
 @client.command()
 @commands.has_permissions(manage_messages=True) 
-async def warn(ctx, user: discord.Member, message):
+async def warn(ctx, user: discord.Member, *, message):
     
     id = user.id
     await user.send(message)
