@@ -836,7 +836,7 @@ async def warn(ctx, user: discord.Member, *, message):
     id = user.id
     embed=discord.Embed(title="⚠️ You have been warned ⚠️")
     embed.add_field(name="Reason:", value=message, inline=True)
-    embed.set_footer(text='- If you would like to dispute this please open a ticket.')
+    embed.set_footer(text='- If you would like to dispute this, please open a ticket.')
     await user.send(embed=embed)
 
 
