@@ -834,9 +834,9 @@ async def customgame(ctx, *, players: int = 10):
 async def warn(ctx, user: discord.Member, *, message):
     
     id = user.id
-    embed=discord.Embed(title="You have been warned:")
+    embed=discord.Embed(title="⚠️ You have been warned:")
     embed.add_field(name="Reason:", value=message, inline=True)
-    await ctx.send(embed=embed)
+    await user.send(embed=embed)
 
 
 
