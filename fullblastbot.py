@@ -14,7 +14,7 @@ import re
 import os
 from discord.ext import commands
 
-client = commands.Bot(command_prefix = '.', help_command=None) #defines the bot
+client = commands.Bot(command_prefix = '.', help_command=None, intents=discord.Intents.all()) #defines the bot
 
 guild = 713133764829642794
 
@@ -51,7 +51,7 @@ async def on_command_error(ctx, error):
 #shows ping
 @client.command()
 async def ping(ctx):
-    await ctx.send(f'My ping is {round(client.latency * 1000)}ms!!!!')
+    await ctx.reply(f'My ping is {round(client.latency * 1000)}ms!!!!')
 
 #pogchamp
 @client.command()
